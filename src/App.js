@@ -17,13 +17,13 @@ function App() {
   return (
     <div className='bg-black'>
       <Routes>
-        <Route path='/' element={<Layout />} />
-        <Route index element={<Home />} />
-        <Route path='recipes/:id' element={<RecipeDetail />} />
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='recipes/:id' element={<RecipeDetail />} />
+        </Route>
       </Routes>
     </div>
   )
 }
 
 export default App
-// https://www.youtube.com/watch?v=Z3hihUtihDk
