@@ -12,9 +12,13 @@ const Home = () => {
         }
         type='home'
       />
+
+      <section
+        id='recipes'
+        className='md:max-w-[1440px] mx-auto px-4 md:px-20'
+      ></section>
     </main>
   )
 }
 
 export default Home
-// https://youtu.be/Z3hihUtihDk?t=1011
