@@ -9,7 +9,7 @@ import { fetchRecipes } from "../utils"
 const Recipes = () => {
   const [recipes, setRecipes] = useState([])
   const [query, setQuery] = useState("Vegan")
-  const [limit, setLimit] = useState("30")
+  const [limit, setLimit] = useState(30)
   const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
@@ -28,8 +28,13 @@ const Recipes = () => {
     }
   }
 
+  const handledSearchedRecipe = async (e) => {
+    e.preventDefault()
+    fetchRecipe()
+  }
+
   const showMore = () => {
-    setLimit((prev) => prev + 10)
+    setLimit((prev) => parseInt(prev, 10) + 10)
     fetchRecipe()
   }
 
@@ -44,7 +49,7 @@ const Recipes = () => {
   return (
     <div className='w-full'>
       <div className='w-full flex items-center justify-center pt-10 pb-5 px-0 md:px-10'>
-        <form className='w-full lg:w-2/4' onSubmit={handleChange}>
+        <form className='w-full lg:w-2/4' onSubmit={handledSearchedRecipe}>
           <Searchbar
             placeholder='eg. Cake, Vegan, Chicken'
             handleInputChange={handleChange}

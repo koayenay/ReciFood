@@ -7,5 +7,5 @@ export async function fetchRecipes(filter) {
 
   const data = await response.json()
   console.log(data)
-  return data
+  return data?.hits
 }
