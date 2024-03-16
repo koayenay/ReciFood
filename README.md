@@ -1,6 +1,6 @@
 # ReciFood
 
-Food Recipe App using React Js | React, Tailwind CSS, Edamam API
+Food Recipe App using React Js | React, Tailwind CSS, Edamam API !
 
 # Getting Started with Create React App
 
